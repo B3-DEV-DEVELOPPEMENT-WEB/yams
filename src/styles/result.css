@@ -1,0 +1,21 @@
+/* result.css */
+
+.result {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 5px;
+}
+
+.result span {
+    background: #61dafb; /* Bleu clair */
+    color: #1d2935; /* Bleu foncé */
+    padding: 40px 30px; /* Ajustez la valeur selon vos besoins */
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .result {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}

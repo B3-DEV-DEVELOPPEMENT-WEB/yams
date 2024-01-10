@@ -1,0 +1,49 @@
+/* home.css */
+.des_section {
+    width: 100%;
+}
+
+.des_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+span {
+    background: #61dafb;
+    color: #1d2935;
+    padding: 40px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    max-width: 150px;
+}
+
+.des_container .selected {
+    background: #ff6347;
+}
+
+span:hover {
+    transform: translateY(-8px);
+}
+
+.rotating {
+    animation: rotateDice 1s linear forwards; /* Durée ajustée à 1 seconde et forwards pour rester dans l'état final */
+}
+
+@keyframes rotateDice {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .des_container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
